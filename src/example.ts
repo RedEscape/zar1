@@ -33,3 +33,20 @@
 // function getLen<T extends Array<any>>(arr: T):number {return arr.length}
 //
 // getLen([1,2,3])
+
+const concat = (str1: string, str2: string): string => str1 + str2;
+
+interface myHometaskInterface {
+  howIDoIt: string;
+  simeArray: (string | number)[];
+  withData: [{ howIDoIt: string; simeArray: [string, number] }];
+}
+const myHometask: myHometaskInterface = {
+  howIDoIt: 'fast',
+  simeArray: ['bla', 'blabla', 23],
+  withData: [{ howIDoIt: 'slow', simeArray: ['eh', 12] }],
+};
+
+interface MyArray<T> {
+  [N: number]: T;
+}
